@@ -5,6 +5,14 @@ def isRepeat(line:str)->bool:
         return False
     mid = len(line) // 2  
     return line[:mid] == line[mid:]
+
+# math way
+def isRepeatMath(line:str)->bool:
+    if len(line)%2 != 0:
+        return False
+    n = len(line)//2
+    num = int(line)
+    return num%(pow(10,n) + 1)==0
     
 
 line = file.readline()
