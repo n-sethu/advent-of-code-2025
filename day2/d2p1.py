@@ -1,3 +1,6 @@
+import time
+start_time = time.time()
+
 file = open("input.txt","r",newline ="")
 ans =0
 def isRepeat(line:str)->bool:
@@ -23,6 +26,9 @@ for word in line_list:
     end = int(spl[1].strip())
     for i in range(start,end+1):
         to_check = str(i)
-        if isRepeat(to_check):
+        if isRepeatMath(to_check):
             ans+=i
+end_time = time.time()
+elapsed_time = end_time - start_time
+print(f"Elapsed time: {elapsed_time} seconds")
 print(ans)
