@@ -1,4 +1,5 @@
 import numpy as np
+import time as t
 with open('input.txt', 'r') as f:
     lines = f.read().strip().split('\n')
 
@@ -28,10 +29,12 @@ def remove() -> int:
                     tp_rolls[i][j]=0
     return local_ans
 
+start_time = t.perf_counter()
 k = remove()
 while k!=0:
     ans+=k
     k=remove()
     
-    
-print(ans)
+end_time = t.perf_counter();
+# print(ans)
+print(end_time-start_time)
