@@ -36,5 +36,5 @@ while k!=0:
     k=remove()
     
 end_time = t.perf_counter();
-# print(ans)
+print(ans)
 print(end_time-start_time)
