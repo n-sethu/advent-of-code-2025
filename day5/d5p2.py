@@ -18,7 +18,7 @@ curr_max = sorted_ranges[0][1]
 for start,end in sorted_ranges:
     if start <= curr_max + 1:  
         curr_max = max(curr_max, end)  
-    else:  # Gap found
+    else:  
         ans += (curr_max - curr_start + 1)  
         curr_start = start  
         curr_max = end
